@@ -6,7 +6,7 @@ video, canvas {
   margin-top: 2px;
   border: 1px solid black;
   display: inline-block;
-  width: 20%;
+  width: 50%;
   height: auto;
 }
 
@@ -28,22 +28,11 @@ canvas {
   text-decoration: none;
 }
 
-#stopButton {
-  margin-left: 2%;
-}
-
 h2 {
   margin-bottom: 4px;
 }
 
-.left {
-  margin-right: 10px;
-  float: left;
-  width: 160px;
-  padding: 0px;
-}
-
-.right {
+display {
   margin-left: 10px;
   float: left;
   width: 160px;
@@ -53,4 +42,19 @@ h2 {
 .bottom {
   clear: both;
   padding-top: 10px;
+}
+
+
+.box {
+  width: 600px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 2px 4px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+.log {
+  margin-top: 8px;
+  font-family: monospace;
 }

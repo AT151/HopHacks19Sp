@@ -1,2 +1,2 @@
 # HopHacks19Sp
-Hophacks thing
+Machine-learning system to provide real-time feedback from input received from webcam

@@ -10,6 +10,10 @@ video, canvas {
   height: auto;
 }
 
+canvas {
+  visibility: hidden;
+}
+
 .button {
   cursor: pointer;
   display: block;
@@ -22,6 +26,10 @@ video, canvas {
   color: white;
   background-color: darkgreen;
   text-decoration: none;
+}
+
+#stopButton {
+  margin-left: 2%;
 }
 
 h2 {

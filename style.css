@@ -2,7 +2,7 @@ body {
   font: 14px "Open Sans", "Arial", sans-serif;
 }
 
-video, canvas {
+video {
   margin-top: 2px;
   border: 1px solid black;
   display: inline-block;
@@ -39,11 +39,15 @@ display {
   padding: 0px;
 }
 
+log {
+  margin-top: 8px;
+  font-family: monospace;
+}
+
 .bottom {
   clear: both;
   padding-top: 10px;
 }
-
 
 .box {
   width: 600px;
@@ -52,9 +56,4 @@ display {
   padding: 2px 4px;
   overflow-y: scroll;
   overflow-x: auto;
-}
-
-.log {
-  margin-top: 8px;
-  font-family: monospace;
 }

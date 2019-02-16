@@ -1,12 +1,10 @@
-var video = document.querySelector('#videoElement');
-var canvas = document.querySelector('#canvas');
-var display = document.querySelector("#display");
+var video = document.querySelector("#videoElement");
+var canvas = document.querySelector("#canvas");
 var logElem = document.querySelector("#log");
+var stopButton = document.querySelector("#stopButton");
 
 var context = canvas.getContext('2d');
-var rawImData; var link; var fileName;
-
-let stopButton = document.getElementById("stopButton");
+var rawImData; var link;
 
 navigator.mediaDevices.getUserMedia({video: true})
   .then(function(stream) {
@@ -33,10 +31,9 @@ function stop(stream) {
 
 function download() {
   rawImData = canvas.toDataURL("image/jpeg", 1.0);
-  fileName = "ss_file.jpeg";
   link = document.createElement('a');
   link.href = rawImData;
-  link.download = fileName;
+  link.download = "ss_file.jpeg";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -46,13 +43,8 @@ stopButton.addEventListener("click", function() {
   stop(video.srcObject);
 }, false);
 
+// Continuous reading of text file "file.txt"
 var http_request = new XMLHttpRequest();
-
-function makeRequest() {
-  http_request.onreadystatechange = handleCheckboxRequest;
-  http_request.open('GET','file.txt',true);
-  http_request.send(null);
-}  
 
 function handleCheckboxRequest() {     
   if (http_request.readyState == 4 && http_request.status == 200) {

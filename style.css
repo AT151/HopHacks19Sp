@@ -5,7 +5,7 @@
 body {
   font-family: Arial;
   padding: 10px;
-  background: #f1f1f1;
+  background: white;
 }
 
 /* Header/Blog Title */
@@ -22,7 +22,7 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(24, 144, 255);
 }
 
 /* Style the topnav links */
@@ -43,7 +43,7 @@ body {
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
+.leftcolumn {
   float: left;
   width: 75%;
 }
@@ -52,20 +52,20 @@ body {
 .rightcolumn {
   float: left;
   width: 25%;
-  background-color: #f1f1f1;
+  background-color: white;
   padding-left: 20px;
 }
 
 /* Fake image */
 .fakeimg {
-  background-color: #aaa;
+  background-color: rgb(239, 239, 239);
   width: 100%;
   padding: 20px;
 }
 
 /* Add a card effect for articles */
 .card {
-  background-color: white;
+  background-color: rgb(234, 241, 252);
   padding: 20px;
   margin-top: 20px;
 }
@@ -81,13 +81,13 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #ddd;
+  background: rgb(239, 239, 239);
   margin-top: 20px;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+  .leftcolumn, .rightcolumn {
     width: 100%;
     padding: 0;
   }
@@ -102,13 +102,20 @@ body {
 }
 
 #preview {
-	width: 50%;
-	background-color: #666;
+	width: 70%;
+	background-color: rgb(239, 239, 239);
+    border-style: solid;
+    border-color: rgb(226, 226, 226);
+    border-radius: 2%;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #recording {
 	width: 50%;
-	background-color: #666;
+	background-color: rgb(239, 239, 239);
 }
 
 .video {
@@ -118,20 +125,28 @@ body {
 
 .button {
   cursor: pointer;
-  display: block;
+  display: inline-block;
   width: 160px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   font-size: 16px;
   text-align: center;
   padding-top: 2px;
   padding-bottom: 4px;
   color: white;
-  background-color: darkgreen;
+  background-color: rgb(24, 144, 255);
   text-decoration: none;
 }
 
+#startButton {
+    margin-right: 2%;
+}
+
+#stopButton {
+    margin-left: 2%;
+}
+
 h2 {
-  margin-bottom: 4px;
+  /*margin-bottom: 4px;*/
 }
 
 .left {
@@ -146,7 +161,7 @@ h2 {
   float: left;
   width: 160px;
   padding: 0px;
-} 
+}
 
 .bottom {
   clear: both;

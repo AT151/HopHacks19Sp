@@ -25,8 +25,11 @@
     <div class="card">
       <h2>Video Feed</h2>
       <h5>Title description, Dec 7, 2017</h5>
-      <video autoplay="true" id="videoElement"></video>
-      <p>Some text..</p>
+      <div id="startButton" class="button">Start</div>
+	  <h2>Preview</h2>
+	  <video id="preview" autoplay muted></video>
+      
+	  <p>Some text..</p>
       <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
     </div>
     <div class="card">
@@ -39,8 +42,10 @@
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
+      <div id="stopButton" class="button">Stop</div>
+	  <h2>Recording</h2>
+	  <video id="recording" controls></video>
+      <a id="downloadButton" class="button">Download</a>
       <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     </div>
     <div class="card">
@@ -54,6 +59,10 @@
       <p>Some text..</p>
     </div>
   </div>
+</div>
+
+<div class="bottom">
+  <pre id="log"></pre>
 </div>
 
 <div class="footer">

@@ -3,15 +3,17 @@ body {
 }
 
 video {
-  margin-top: 2px;
   border: 1px solid black;
-  display: inline-block;
-  width: 50%;
+  display: block;
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
   height: auto;
 }
 
 canvas {
-  visibility: hidden;
+    /*float: right;*/
+    visibility: hidden;
 }
 
 .button {
@@ -49,11 +51,49 @@ log {
   padding-top: 10px;
 }
 
-.box {
-  width: 600px;
-  height: 300px;
-  border: 1px solid black;
-  padding: 2px 4px;
-  overflow-y: scroll;
-  overflow-x: auto;
+.header {
+    width: 100%;
+    float: center;
+    margin: 0;
+    padding: 0;
+}
+
+.leftcolumn {
+    float: left;
+    margin-left: 5%;
+    margin-right: 1.5%;
+    width: 68.5%;
+    display: inline-block;
+}
+
+.tempnav {
+    width: 100%;
+    background-color: rgb(24, 144, 255);
+    height: 50px;
+}
+
+hr {
+    max-width: 90%;
+    border-color: rgb(24, 144, 255);
+}
+
+.rightcolumn {
+    float: right;
+    margin-right: 5%;
+    margin-left: 1.5%;
+    width: 18.5%;
+    display: inline-block;
+}
+
+.card {
+    background-color: rgb(234, 241, 252);
+    height: inherit;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    min-height: 300px;
+}
+
+h1, h3 {
+    text-align: center;
 }

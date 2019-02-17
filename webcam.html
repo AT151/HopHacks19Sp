@@ -4,27 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>???</title>
+  <title>nathan get in the frame</title>
 </head>
 <body>
 
 <div class="header">
-    <h1>nathan get in the frame</h1>
+    <!---<h1>nathan get in the frame</h1>--->
+    <img src="tempbanner.png"></img>
 </div>
 <hr>
 <div class="leftcolumn">
     <div class="card">
+        <video id="videoElement" autoplay muted></video>
+        <canvas id="canvas"> </canvas>
     </div>
 </div>
 <div class="rightcolumn">
     <div class="card">
         <h3>Feedback</h3>
+        <div id="log">text to be replaced</div>
+        <div id="stopButton" class="button">Stop</div>
     </div>
 </div>
-<video id="videoElement" autoplay muted></video>
-<canvas id="canvas"> </canvas>
-<div id="stopButton" class="button">Stop</div>
-<div id="log">text to be replaced</div>
+<div class="footer">
+
+</div>
 
 <script src="script.js"></script>
 

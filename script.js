@@ -16,9 +16,9 @@ var intSetter = setInterval(function() {
   context.clearRect(0,0, canvas.width, canvas.height);
   context.beginPath();
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  download();
+  //download();
 }, 1000);
-  
+
 function getScreenshot(){
   intSetter;
   textSetter;
@@ -46,7 +46,7 @@ stopButton.addEventListener("click", function() {
 // Continuous reading of text file "file.txt"
 var http_request = new XMLHttpRequest();
 
-function handleCheckboxRequest() {     
+function handleCheckboxRequest() {
   if (http_request.readyState == 4 && http_request.status == 200) {
 	logElem.innerHTML = http_request.responseText;
   }

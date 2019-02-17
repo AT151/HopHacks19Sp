@@ -10,6 +10,7 @@ from torch.autograd import Variable
 import cv2
 from sklearn.model_selection import train_test_split
 import os
+import pickle
 
 device = torch.device('cpu')  # sad reax only
 
@@ -28,7 +29,7 @@ for folder in os.listdir("./pictures/"):
 
 x = np.array(x)
 y = np.array(y)
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.002, random_state=0)
 
 
 class TrainDataset(Dataset):
@@ -46,7 +47,8 @@ class TrainDataset(Dataset):
 
 class TestDataset(Dataset):
     def __init__(self):
-        self.len = x_test.shape[        self.x_data = torch.from_numpy(x_test).type(torch.FloatTensor)
+        self.len = x_test.shape[0]
+        self.x_data = torch.from_numpy(x_test).type(torch.FloatTensor)
         self.y_data = torch.from_numpy(y_test).type(torch.LongTensor)
 
     def __getitem__(self, index):
@@ -95,6 +97,10 @@ def train(epoch, train_loader):
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
                 epoch, batch_idx * len(data), len(train_loader.dataset),
                        100. * batch_idx / len(train_loader), loss.data))
+    if epoch == 10:
+        pkl_filename = "pickle_model.pkl"
+        with open(pkl_filename, 'wb') as file:
+            pickle.dump(model, file)
 
 
 def test(test_loader):
@@ -131,5 +137,6 @@ if __name__ == '__main__':
 
     for epoch in range(1, 11):
         train(epoch, train_loader)
-        test(test_loader)
+
+        # test(test_loader)
 

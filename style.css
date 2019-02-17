@@ -1,9 +1,10 @@
 body {
   font: 14px "Open Sans", "Arial", sans-serif;
-  /*background-image: url("web background.png");
+  background-image: url("web background.png");
   background-repeat: no-repeat;
-  background-size: cover;*/
-  background-color: rgb(178, 225, 221);
+  background-size: cover;
+  background-color: rgb(234, 241, 252);
+  background-attachment: fixed;
 }
 
 video {
@@ -75,6 +76,7 @@ display {
 hr {
     max-width: 90%;
     border-color: rgb(24, 144, 255);
+    line-height: 125%;
 }
 
 .rightcolumn {
@@ -87,6 +89,7 @@ hr {
 
 .card {
     background-color: rgb(234, 241, 252);
+    border: 1px solid rgb(24, 144, 255);
     height: inherit;
     display: block;
     margin: auto;

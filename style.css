@@ -1,6 +1,9 @@
 body {
   font: 14px "Open Sans", "Arial", sans-serif;
-  background-color: rgb(126, 126, 126);
+  /*background-image: url("web background.png");
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  background-color: rgb(178, 225, 221);
 }
 
 video {

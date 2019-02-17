@@ -1,5 +1,6 @@
 body {
   font: 14px "Open Sans", "Arial", sans-serif;
+  background-color: rgb(126, 126, 126);
 }
 
 video {
@@ -7,7 +8,6 @@ video {
   display: block;
   width: 70%;
   margin: auto;
-  margin-top: 5px;
   height: auto;
 }
 
@@ -20,14 +20,15 @@ canvas {
   cursor: pointer;
   display: block;
   width: 160px;
-  border: 1px solid black;
+  border: 1px solid rgb(24, 144, 255);
   font-size: 16px;
   text-align: center;
   padding-top: 2px;
   padding-bottom: 4px;
   color: white;
-  background-color: darkgreen;
+  background-color: rgb(24, 144, 255);
   text-decoration: none;
+  border-radius: 1%;
 }
 
 h2 {
@@ -59,6 +60,7 @@ display {
     margin-right: 1.5%;
     width: 68.5%;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .tempnav {
@@ -85,7 +87,8 @@ hr {
     height: inherit;
     display: block;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     min-height: 300px;
 }
 
@@ -107,6 +110,7 @@ img {
 #log {
     margin-left: 2%;
     min-height: 200px;
+    text-align: center;
 }
 
 #stopButton {
@@ -119,4 +123,8 @@ img {
     margin: auto;
     display: block;
     width: 90%;
+}
+
+.button:hover{
+    background-color: rgb(0, 90, 178);
 }

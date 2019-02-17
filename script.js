@@ -1,6 +1,7 @@
 var video = document.querySelector("#videoElement");
 var canvas = document.querySelector("#canvas");
-var logElem = document.querySelector("#log");
+var x = document.getElementById("card1");
+var logElem = x.querySelector("#log");
 var stopButton = document.querySelector("#stopButton");
 
 var context = canvas.getContext('2d');
@@ -16,7 +17,7 @@ var intSetter = setInterval(function() {
   context.clearRect(0,0, canvas.width, canvas.height);
   context.beginPath();
   context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  //download();
+  download();
 }, 1000);
 
 function getScreenshot(){
@@ -51,6 +52,14 @@ function handleCheckboxRequest() {
 	logElem.innerHTML = http_request.responseText;
   }
 }
+
+/*
+function makeRequest() {
+  http_request.onreadystatechange = handleCheckboxRequest;
+  http_request.open('GET','file.txt',true);
+  http_request.send(null);
+}
+*/
 
 var textSetter = setInterval(function() {
 	http_request.onreadystatechange = handleCheckboxRequest;

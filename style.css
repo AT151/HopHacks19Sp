@@ -41,11 +41,6 @@ display {
   padding: 0px;
 }
 
-log {
-  margin-top: 8px;
-  font-family: monospace;
-}
-
 .bottom {
   clear: both;
   padding-top: 10px;
